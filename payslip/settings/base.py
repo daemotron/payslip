@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hub.urls'
+ROOT_URLCONF = 'payslip.urls'
 
 TEMPLATES = [
     {

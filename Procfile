@@ -1,1 +1,1 @@
-web: gunicorn hub.wsgi
+web: gunicorn payslip.wsgi
