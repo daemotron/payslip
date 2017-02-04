@@ -1,0 +1,19 @@
+{
+  "name": "Air-Child Payslip",
+  "description": "FSEconomy Pay Roll Calculator for Air-Child",
+  "image": "heroku/python",
+  "repository": "https://github.com/air-child/payslip",
+  "scripts": {},
+  "env": {
+    "DJANGO_SETTINGS_MODULE": {
+      "required": true
+    },
+    "SECRET_KEY": {
+      "required": true
+    }
+  },
+  "formation": {},
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "buildpacks": []
+}
