@@ -1,4 +1,8 @@
 # Payslip
+
+[![Build Status](https://travis-ci.org/air-child/payslip.svg?branch=master)](https://travis-ci.org/air-child/payslip)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/a8e43ff9f66f4ca199b932fd8c86fe16/badge.svg)](https://www.quantifiedcode.com/app/project/a8e43ff9f66f4ca199b932fd8c86fe16)
+
 Payslip is a web application used for calculating the monthly pay
 roll for Air-Child's official FSEconomy group, Air Child VA.
 
