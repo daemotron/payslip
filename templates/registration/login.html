@@ -1,0 +1,50 @@
+{% extends 'base_external.html' %}
+
+{% block site_title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="col-md-4 col-md-offset-4">
+        <div class="login-panel panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Please Sign In</h3>
+            </div>
+            <div class="panel-body">
+                {% if form.errors %}
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Your username or password didn&apos;t match. Please try again.
+                    </div>
+                {% endif %}
+                <form role="form" method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <fieldset>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input class="form-control" placeholder="User ID" name="username" type="text" autofocus>
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                        </div>
+                        <!---
+                        <div class="checkbox">
+                            <label>
+                                <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                            </label>
+                        </div>
+                        -->
+                        <input type="hidden" name="next" value="{{ next }}">
+                        <!-- Change this to a button or input when using this as a form -->
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="panel-footer">
+                Don&apos;t have an account yet? Click to
+                <a href="#">Register <span class="fa fa-arrow-circle-right"></span></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
