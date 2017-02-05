@@ -1,212 +1,17 @@
 {% extends 'base.html' %}
 
 {% load staticfiles %}
-{% load flatpages %}
 
 {% block navbar_top %}
     <ul class="nav navbar-top-links navbar-right">
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-messages">
-                <li>
-                    <a href="#">
-                        <div>
-                            <strong>John Smith</strong>
-                            <span class="pull-right text-muted">
-                                <em>Yesterday</em>
-                            </span>
-                        </div>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <strong>John Smith</strong>
-                            <span class="pull-right text-muted">
-                                <em>Yesterday</em>
-                            </span>
-                        </div>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <strong>John Smith</strong>
-                            <span class="pull-right text-muted">
-                                <em>Yesterday</em>
-                            </span>
-                        </div>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a class="text-center" href="{% url 'message:index' %}">
-                        <strong>Go to Message Centre</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- /.dropdown-messages -->
-        </li>
-        <!-- /.dropdown -->
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-tasks">
-                <li>
-                    <a href="#">
-                        <div>
-                            <p>
-                                <strong>Task 1</strong>
-                                <span class="pull-right text-muted">40% Complete</span>
-                            </p>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span class="sr-only">40% Complete (success)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <p>
-                                <strong>Task 2</strong>
-                                <span class="pull-right text-muted">20% Complete</span>
-                            </p>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                    <span class="sr-only">20% Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <p>
-                                <strong>Task 3</strong>
-                                <span class="pull-right text-muted">60% Complete</span>
-                            </p>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    <span class="sr-only">60% Complete (warning)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <p>
-                                <strong>Task 4</strong>
-                                <span class="pull-right text-muted">80% Complete</span>
-                            </p>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                    <span class="sr-only">80% Complete (danger)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a class="text-center" href="#">
-                        <strong>See All Tasks</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- /.dropdown-tasks -->
-        </li>
-        <!-- /.dropdown -->
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-alerts">
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-comment fa-fw"></i> New Comment
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                            <span class="pull-right text-muted small">12 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-envelope fa-fw"></i> Message Sent
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-tasks fa-fw"></i> New Task
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a class="text-center" href="{% url 'notification:index' %}">
-                        <strong>See All Notifications</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- /.dropdown-alerts -->
-        </li>
-        <!-- /.dropdown -->
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                </li>
+                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                </li>
+                <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
             </ul>
             <!-- /.dropdown-user -->
         </li>
@@ -216,18 +21,7 @@
                 <i class="fa fa-question-circle fa-fw"></i>  <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-plane fa-fw"></i> Fleet Map</a></li>
-                <li><a href="#"><i class="fa fa-map-marker fa-fw"></i> Hubs</a></li>
-                <li><a href="#"><i class="fa fa-globe fa-fw"></i> Route Net</a></li>
-                <li class="divider"></li>
-                {% get_flatpages '/about/' for user as about_pages %}
-                {% for page in about_pages %}
-                <li>
-                    <a href="{% url 'django.contrib.flatpages.views.flatpage' page.url %}">
-                        <i class="fa fa-info-circle fa-fw"></i> {{ page.title }}
-                    </a>
-                </li>
-                {% endfor %}
+                <li><a href="#"><i class="fa fa-info-circle fa-fw"></i> About</a></li>
             </ul>
             <!-- /.dropdown-user -->
         </li>
@@ -251,113 +45,54 @@
                     </span>
                     </div>-->
                     <div class="row">
-                        <div class="col-xs-4">
-                            <img src="{% static 'img/twofour.png' %}" class="img-rounded" width="60" height="60" />
-                        </div>
-                        <div class="col-xs-8">
-                            <h4 class="pilot-name">Jesco Freund</h4>
-                            <span class="text-muted">Senior Captain<br />ATPL</span>
+                        <div class="col-xs-12">
+                            <img src="{% static 'img/air-child_logo_220.png' %}" class="img-rounded" width="220" height="68" />
                         </div>
                     </div>
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-plane fa-fw"></i> Flight Operations<span class="fa arrow"></span></a>
+                    <a href="{% url 'dashboard:index' %}"><i class="fa fa-home fa-fw"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i> Crew Payment<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Booking Centre</a>
+                            <a href="#">Payment Policy</a>
                         </li>
                         <li>
-                            <a href="#">Briefing Room</a>
+                            <a href="#">Payslip</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Statistics<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">Flights</a>
                         </li>
                         <li>
-                            <a href="#">My Logbook</a>
+                            <a href="#">Financials</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-database fa-fw"></i> Data Loading<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">Available Data</a>
+                        </li>
+                        <li>
+                            <a href="#">Load from FSE</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-graduation-cap fa-fw"></i> Training<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-gear fa-fw"></i> Settings<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Training Courses</a>
-                        </li>
-                        <li>
-                            <a href="#">Exam Room</a>
-                        </li>
-                        <li>
-                            <a href="#">Checkride</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-user fa-fw"></i> Crew Lounge<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">My Career</a>
-                        </li>
-                        <li>
-                            <a href="#">Pilot Roster</a>
-                        </li>
-                        <li>
-                            <a href="#">Forum</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Management<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Fleet</a>
-                        </li>
-                        <li>
-                            <a href="#">Staffing</a>
-                        </li>
-                        <li>
-                            <a href="#">Planning <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li><a href="#">Hubs</a></li>
-                                <li><a href="#">Charter</a></li>
-                                <li><a href="#">Missions</a></li>
-                                <li><a href="#">Routes</a></li>
-                                <li><a href="#">Schedule</a></li>
-                            </ul>
-                            <!-- /.nav-third-level -->
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-cloud-download fa-fw"></i> Downloads<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Liveries</a>
-                        </li>
-                        <li>
-                            <a href="#">Plugins</a>
-                        </li>
-                        <li>
-                            <a href="#">Tools</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-gear fa-fw"></i> Administration<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Site Settings <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Fleet</a></li>
-                                <li><a href="#">Navigation</a></li>
-                                <li><a href="#">Security</a></li>
-                                <li><a href="#">System</a></li>
-                            </ul>
-                            <!-- /.nav-third-level -->
-                        </li>
-                        <li>
-                            <a href="#">Divisions</a>
+                            <a href="#">FSEconomy</a>
                         </li>
                         <li>
                             <a href="#">Users</a>
