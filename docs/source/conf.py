@@ -67,7 +67,7 @@ source_suffix = '.rst'
 master_doc = 'contents'
 
 # General information about the project.
-project = 'Air-Child FSE Payslip'
+project = 'Air-Child Payslip'
 copyright = '2017, The Air-Child Project'
 author = 'The Air-Child Project'
 
