@@ -1,0 +1,32 @@
+{% extends 'base_external.html' %}
+
+{% block site_title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="col-md-4 col-md-offset-4">
+        <div class="login-panel panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Logged Out</h3>
+            </div>
+            <div class="panel-body">
+                {% if form.errors %}
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Your username or password didn&apos;t match. Please try again.
+                    </div>
+                {% endif %}
+                <p>
+                    Thank you for using Payslip. Your session has been closed, so you can now
+                    safely close your browser window.
+                </p>
+
+            </div>
+            <div class="panel-footer">
+                Want to stay? Take me back to the
+                <a href="{% url 'dashboard:index' %}">Dashboard <span class="fa fa-arrow-circle-right"></span></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
