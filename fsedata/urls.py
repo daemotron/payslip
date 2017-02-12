@@ -12,5 +12,5 @@ from . import views
 app_name = 'fsedata'
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    #url(r'^$', views.IndexView.as_view(), name='index'),
 ]
