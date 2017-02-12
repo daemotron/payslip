@@ -5,3 +5,4 @@ Application Documentation
    :maxdepth: 2
 
    dashboard
+   fsedata
