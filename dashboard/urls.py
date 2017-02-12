@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    notification.urls
-    ~~~~~~~~~~~~~~~~~
+    dashboard.urls
+    ~~~~~~~~~~~~~~
     :copyright: Copyright 2017 by The Air-Child Project team, see AUTHORS.
     :license: MIT License, see LICENSE for details.
 """
