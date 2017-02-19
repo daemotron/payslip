@@ -8,3 +8,4 @@
 """
 
 from .setting import Setting
+from .month import Month
