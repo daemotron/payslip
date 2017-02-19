@@ -18,3 +18,11 @@ class Setting(models.Model):
     key = models.CharField(max_length=100, unique=True)
     value = models.CharField(max_length=200)
     description = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        """
+        Provide an understandable representation of a setting object
+
+        :return: key string
+        """
+        return self.key
