@@ -7,10 +7,11 @@
 """
 
 from django.conf.urls import url
-from . import views
+from .views import setting
 
 app_name = 'fsedata'
 
 urlpatterns = [
     #url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^setting$', setting.SettingView.as_view(), name='setting'),
 ]
